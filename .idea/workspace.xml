@@ -4,16 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4a41e2f-6cbf-4238-9e80-5eb7d480219b" name="Changes" comment="Creacion de proyecto">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NoSolid/SRP/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NoSolid/SRP/Empleado.java" afterDir="false" />
+    <list default="true" id="d4a41e2f-6cbf-4238-9e80-5eb7d480219b" name="Changes" comment="Primeras preguntas">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NoSolid/SRP/GeneratorIDEmpleado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NoSolid/SRP/SeniorityChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NoSolid/SRP/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NoSolid/SRP/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NoSolid/SRP/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NoSolid/SRP/Empleado.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,6 +56,12 @@
     "WebServerToolWindowFactoryState": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ALESANDRA\Desktop\Califica3-Grupo5\.idea" />
+      <recent name="C:\Users\ALESANDRA\Desktop\Califica3-Grupo5\src\main\java\NoSolid\SRP" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Cliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NoSolid.SRP.Cliente" />
@@ -63,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658025036734</updated>
-      <workItem from="1658025038093" duration="1037000" />
+      <workItem from="1658025038093" duration="8917000" />
     </task>
     <task id="LOCAL-00001" summary="Creacion de proyecto">
       <created>1658025064196</created>
@@ -72,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658025064197</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Primeras preguntas">
+      <created>1658026230361</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658026230361</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +125,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creacion de proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion de proyecto" />
+    <MESSAGE value="Primeras preguntas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primeras preguntas" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Califica3_Grupo5$Cliente.ic" NAME="Cliente Coverage Results" MODIFIED="1658026365857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>NoSolid.SRP.*</FILTER>
+    </SUITE>
   </component>
 </project>
