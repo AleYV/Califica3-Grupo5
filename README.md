@@ -94,4 +94,63 @@ Luego imprimiremos ambas listas de los departamentos, posteriormente las listas 
 Las ventajas de este tipo de diseño son:  
 - Si necesitamos crear un estudiante directamente lo haremos en las listas de cada departamento(Ciencia o Artes) así evitandonos una comprobación extra.  
 - Si deseamos agregar un nuevo departamento con su respectiva verificación lo que debemos hacer es crear una nueva lista en la clase Cliente con los respectivos estudiantes,
-y para la verificación se crearía una nueva clase que extienda de la interfaz DistintionDecider generando una forma simplificada de declaración.
+y para la verificación se crearía una nueva clase que extienda de la interfaz DistintionDecider generando una forma simplificada de declaración.  
+
+**Pregunta 12**  
+Salida:  
+
+![img_20.png](img/img_20.png)
+
+Explicación:
+En la clase Cliente, creamos dos usuarios que están registrados, "Abejita" y "Chalito", y una instancia de la clase PaymentHelper, 'helper'.
+![img_21.png](img/img_21.png)
+
+Añadimos los usuarios a la lista de 'helper' y usamos su método showPreviousPayments(), el cual, de dicha lista de usuarios, llama al método previousPaymentInfo() de cada usuario para mostrar los detalles de sus últimos pagos realizados.
+![img_22.png](img/img_22.png)
+![img_23.png](img/img_23.png)
+
+Luego, de manera similar, llamamos al método processNewPayments(), el cual, itera la lista de usuarios y hace llamada al método newPayment() de cada usuario para mostrar las solicitudes de pago actuales.
+![img_24.png](img/img_24.png)  
+
+**Pregunta 13**  
+Implementación de la clase GuestUserPayment:
+
+![img_25.png](img/img_25.png)  
+
+**Pregunta 14**  
+![img_26.png](img/img_26.png)  
+
+Se encuentra la excepción UnsupportedOperationException() debido al método previousPaymentInfo() de la nueva clase GuestUserPayment. Esto debido a que un usuario invitado no tiene un historial de pagos. Esto se podría solucionar con un if-else en el método showPreviousPayments() de la clase PaymentHelper el cual solo hará llamado al método previousPaymentInfo() para los usuarios que estén registrados.
+
+**Pregunta 15**  
+
+Si quisieramos añadir más tipos de clientes, para la solución dada en la pregunta anterior, se tendría que estar añadiendo más clausulas if-else para cada nuevo tipo de cliente.
+
+**Pregunta 16**  
+
+Interfaces:  
+![img_27.png](img/img_27.png)  
+
+Usuarios:
+![img_28.png](img/img_28.png)  
+
+Clase PaymentHelper:  
+![img_29.png](img/img_29.png)
+
+Clase Cliente:  
+![img_30.png](img/img_30.png)
+
+**Pregunta 17**
+
+Se han separado los métodos que antes estaban en Payment por dos nuevas interfaces, PreviousPayment y NewPayment, con esto podemos definir que tipo de usuario debería poder usar dichos métodos implementando las adecuadas interfaces. Así cada usuario registrado podrá ver su historial de pagos realizados y realizar nuevas operaciones, mientras que el usuario invitado solo podrá realizar nuevas operaciones.
+
+**Pregunta 18**  
+
+Método estático para las nuevas solicitudes de pago:  
+![img_31.png](img/img_31.png)  
+
+Uso del método estático en la clase Cliente:  
+![img_32.png](img/img_32.png)  
+
+Resultados:  
+![img_33.png](img/img_33.png)
