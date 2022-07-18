@@ -1,5 +1,4 @@
-# Califica3-Grupo5
-# EvaluacionGrupal2
+# Calificada3-Grupo5
 Integrantes:  
   - Gladys Alesandra Yagi Vásquez
   - Italo Enrique Silva Guanilo
