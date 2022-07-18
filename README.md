@@ -99,17 +99,15 @@ y para la verificación se crearía una nueva clase que extienda de la interfaz 
 **Pregunta 12**  
 Salida:  
 
-![img_20.png](img/img_20.png)
+![img_20.png](img/img_20.png)  
 
-Explicación:
+Explicación:  
 En la clase Cliente, creamos dos usuarios que están registrados, "Abejita" y "Chalito", y una instancia de la clase PaymentHelper, 'helper'.
-![img_21.png](img/img_21.png)
-
-Añadimos los usuarios a la lista de 'helper' y usamos su método showPreviousPayments(), el cual, de dicha lista de usuarios, llama al método previousPaymentInfo() de cada usuario para mostrar los detalles de sus últimos pagos realizados.
-![img_22.png](img/img_22.png)
-![img_23.png](img/img_23.png)
-
-Luego, de manera similar, llamamos al método processNewPayments(), el cual, itera la lista de usuarios y hace llamada al método newPayment() de cada usuario para mostrar las solicitudes de pago actuales.
+![img_21.png](img/img_21.png)  
+Añadimos los usuarios a la lista de 'helper' y usamos su método showPreviousPayments(), el cual, de dicha lista de usuarios, llama al método previousPaymentInfo() de cada usuario para mostrar los detalles de sus últimos pagos realizados.  
+![img_22.png](img/img_22.png)  
+![img_23.png](img/img_23.png)  
+Luego, de manera similar, llamamos al método processNewPayments(), el cual, itera la lista de usuarios y hace llamada al método newPayment() de cada usuario para mostrar las solicitudes de pago actuales.  
 ![img_24.png](img/img_24.png)  
 
 **Pregunta 13**  
@@ -130,15 +128,15 @@ Si quisieramos añadir más tipos de clientes, para la solución dada en la preg
 
 Interfaces:  
 ![img_27.png](img/img_27.png)  
-
-Usuarios:
+  
+Usuarios:  
 ![img_28.png](img/img_28.png)  
-
+  
 Clase PaymentHelper:  
-![img_29.png](img/img_29.png)
+![img_29.png](img/img_29.png)  
 
 Clase Cliente:  
-![img_30.png](img/img_30.png)
+![img_30.png](img/img_30.png)  
 
 **Pregunta 17**
 
@@ -153,4 +151,72 @@ Uso del método estático en la clase Cliente:
 ![img_32.png](img/img_32.png)  
 
 Resultados:  
-![img_33.png](img/img_33.png)
+![img_33.png](img/img_33.png)  
+
+**Pregunta 19**  
+Debido a que  la clase ImpresoraBasica no deberá poseer un método sendFax() ya que no necesita de este para funcionar, dado que cada vez que hagamos
+alguna modificación en el método sendFax() de la clase ImpresoraAvanzada tambien nos hará modificar el método de ImpresoraBásica  
+
+**Pregunta 20**  
+El problema es tener que estar modificando el método sendFax() de la clase ImpresoraBasica cuando esta no necesita dicho método.  
+
+**Problema 21**  
+Para eliminar el problema se crea una interfaz Fax que extienda de la interfaz Impresora y contenga el método sendFax() que quite el sendFax() de Impresora, asi evitamos que si modificamos algo
+en este método la clase ImpresoraBasica tenga que tambien tener que modificarse.
+![img_34.png](img/img_34.png)    
+Además de modificar el implements de la calse ImpresoraAvanzada hacia Fax para que asi pueda tener ambos métodos.  
+
+**Pregunta 22**  
+No ya que la clase ImpresoraBasica no necesita del método sendFax().
+  
+**Pregunta 23**  
+Tal como se ha visto en las preguntas anteriores el método que no se va a usar en la clase ImpresoraBasica se pondrá en un interfaz nueva que extienda de la interfaz principal para asi el método no tenga que estar modificandose en clases donde no se usa.
+
+**Pregunta 24**  
+El codigo no bota un error dado que el metodo sendFax esta comentado, pero si descomentamos la instruccion impresora.sendFax() nos botará un error
+![img_35.png](img/img_35.png)  
+Esto se debe a que se llama al método sendFax de la función ImpresoraBasica nos botara una excepcion si se ejecta. Lo mismo sucedera si se omenta esta instruccion
+y se descomenta la instrucción dispositivo.sendFax() ya que es la misma llamada al método antes mencionado.  
+
+**Pregunta 25**  
+La funcion lambda que se usara es:  
+![img_38.png](img/img_38.png)  
+Se uso el método foreach para pasarle la expresión lambda de printDocument  
+
+**Pregunta 26**  
+Salida:  
+![img_36.png](img/img_36.png)  
+
+Explicación:
+
+![img_37.png](img/img_37.png)  
+
+Lo primero que realiza es crear un objeto de tipo ImpresoraAvazada que extiende de la interfaz Impresora, luego se realiza los métodos que tiene este tipo de impresora
+printDocument() y sendFax() los cuales nos muestra que la impresora imprime y envia un fax.
+Posteriormente se crea un objeto de la clase ImpresoraBasica el cual le diremos que nos muestre que la impresora imprime.  
+
+**Pregunta 27**  
+Se implementa las interfaces con los respectivos métodos:  
+
+![img_39.png](img/img_39.png)  ![img_40.png](img/img_40.png)  
+Las clases ImpresoraAvanzada e ImpresoraBasica quedan de la siguiente forma  
+
+![img_41.png](img/img_41.png)  
+![img_42.png](img/img_42.png)  
+La clase Cliente  
+
+![img_43.png](img/img_43.png)  
+Lo primero que realiza es la creacion de un objeto impresora de tipo ImpresoraBasica e indica que imprime, debido al polimorfismo dicho objeto es ahora del tipo ImpresoraBasic para luego mostrarnos que imprime.
+Luego nos crea un objeto de la interfaz Fax del tipo ImpresoraAvanzado y nos muestra que envia un fax.
+Asi nos quedara la salida:
+![img_43.png](img/img_43.png)  
+  
+**Pregunta 28**  
+Al declarar un metodo prederminado en la interfaz, hará que si en caso en alguna de las clases que implementa dicha interfaz no sobreescribe alguno de los métodos, este tomara el valor con el cual se le declaro en la interfaz.  
+  
+**Pregunta 29**  
+Como se explica en la pregunta anterior en caso de qe alguna clase no sobreescriba el método de fax, entonces este mostrará lo que se haya declarado en la interfaz. El principal problema es que si un programa no esta usando el principio de segregación de interfaz
+y lla clase ImpresoraBasica no lo sobreescribe nos mostrará que este tipo de impresora esta enviando un fax cuando esto no es posible.  
+  
+**Pregunt 30**  
+Al usar un método vacío en lugar de lanzar una excepción en el método sendFax() de la clase ImpresoraBasica, al ser invocado este método no hara nada y en caso de tener una sentencia posterior a su llamada la ejecutara sin ningun problema, en cambio si tiene una excepcion el programa se cortará al invocar al método.
