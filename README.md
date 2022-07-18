@@ -16,20 +16,20 @@ Luego se hace un llamado al método showEmpDetail() de la clase Cliente, pasánd
 Este método, lo primero que hace es invocar al método displayEmpDetail() de la clase Empleado, el cual nos imprime los nombres y los años de experiencia del empleado. 
 ![img_4.png](img/img_4.png)
 Se genera un Id para imprimirlo con el método invocado generateEmpId() de la clase Empleado. Este Id es creado mediante la generación de un número entero random entre 0 y 1000, y la primera letra del nombre del empleado.       
-![img_2.png](img/img_2.png)     
+![img_2.png](img/img_2.png)         
 Luego, evalúa si los años de experiencia del empleado son suficientes para ser considerado un senior(los años de experiencia deben ser mayores a 5) con el método checkSeniority() de la clase Empleado, caso contrario es un Junior, luego lo imprime.
-![img_7.png](img/img_7.png)     
+![img_7.png](img/img_7.png)         
 Se realiza el mismo procedimiento para la creación del objeto de la clase Empleado con los atributos de nombre Chalito, apellido Smart y experiencia de 3.2.        
-![img_8.png](img/img_8.png)
+![img_8.png](img/img_8.png)     
 **Pregunta 2**     
 Este diseño tiene el principal problema de que la clase Cliente contiene un método que debería pertenecer a la clase Empleado (showEmpDetail()); ya que lo único que este método hace es que por medio del atributo de tipo Empleado que recibe, llama a métodos de la clase Empleado. 
 
 **Pregunta 3**     
 Se modificó el método showEmpDetail() de la clase Cliente para llamar a los métodos de las clases creadas GeneratorIDEmpleado(método generateEmpId()) y SeniorityChecker(método checkSeniority()).      
 ![img_9.png](img/img_9.png)     
-En las clases creadas, los métodos creados son de tipo estático para no tener que crear un nuevo objeto de cada una de las clases.
-![img_10.png](img/img_10.png)       
-![img_11.png](img/img_11.png)       
+En las clases creadas, los métodos creados son de tipo estático para no tener que crear un nuevo objeto de cada una de las clases.      
+![img_10.png](img/img_10.png)           
+![img_11.png](img/img_11.png)           
 **Pregunta 4**    
 Empleado.java       
 Tenemos una clase que instancia un objeto con los atributos de firstName, lastName y experience. También cuenta con un método que imprime los atributos del objeto.
@@ -62,8 +62,8 @@ El problema que se tiene principalmente es cuando se llama a la clase Distintion
   
 **Pregunta 8**  
   
-Generamos la interfaz DistintionDecider con el método evaluationDistinction() el cual es abstacto por pertenecer a la interfaz
-![img_15.png](img/img_15.png)  
+Generamos la interfaz DistintionDecider con el método evaluationDistinction() el cual es abstacto por pertenecer a la interfaz      
+![img_15.png](img/img_15.png)       
   
 **Pregunta 9**  
   
@@ -74,9 +74,9 @@ Para las clases ArtsDistinctionDecider y ScienceDistinctionDecider que implement
 **Pregunta 10**  
   
 Salida:  
-![img_18.png](img/img_18.png) 
-Explicación:  
-Estudiante.java  
+![img_18.png](img/img_18.png)       
+Explicación:        
+Estudiante.java         
 La calse abstacta solo declara nuestros parametors que usaremos para definir cualquier objeto de este tipo(name, regName,score)  
 ArteEstudiante.java y CienciaEstudiante.java  
 Ambas clases extienden de la clase abstracta Estudiante y son dos tipos de esta.  
@@ -84,8 +84,8 @@ DistintionDecider.java
 Es una interfaz que declara el metodo que usaran as clases que implementaran.  
 ScienceDistinctionDecider.java y ArtsDistinctionDecider.java  
 Clases que implementan la interfaz DistintionDecider y nos evalua si el estudiante de su departamento obtienen una distionción 
-Cliente.java  
-![img_19.png](img/img_19.png) 
+Cliente.java    
+![img_19.png](img/img_19.png)       
 El método main() nos creara dos listas de alumnos de los departamentos de Ciencia y Arte mediante los métodos enrollScienceStudents() y enrollArtsStudents() respectivamente. Ambos métodos nos crean y agregan objetos de tipo Estudiante a cada una de las listas.
 Luego imprimiremos ambas listas de los departamentos, posteriormente las listas de estudiantes de los departamentos de ciencia y artes llamaran a las clases ScienceDistinctionDecider y ArtsDistinctionDecider respectivamente para poder determnar a aquellos estudiantes que hayan obtenido distincion en esos departamentos.  
   
@@ -209,7 +209,7 @@ La clase Cliente
 Lo primero que realiza es la creacion de un objeto impresora de tipo ImpresoraBasica e indica que imprime, debido al polimorfismo dicho objeto es ahora del tipo ImpresoraBasic para luego mostrarnos que imprime.
 Luego nos crea un objeto de la interfaz Fax del tipo ImpresoraAvanzado y nos muestra que envia un fax.
 Asi nos quedara la salida:
-![img_43.png](img/img_43.png)  
+![img_44.png](img/img_44.png)  
   
 **Pregunta 28**  
 Al declarar un metodo prederminado en la interfaz, hará que si en caso en alguna de las clases que implementa dicha interfaz no sobreescribe alguno de los métodos, este tomara el valor con el cual se le declaro en la interfaz.  
@@ -218,5 +218,46 @@ Al declarar un metodo prederminado en la interfaz, hará que si en caso en algun
 Como se explica en la pregunta anterior en caso de qe alguna clase no sobreescriba el método de fax, entonces este mostrará lo que se haya declarado en la interfaz. El principal problema es que si un programa no esta usando el principio de segregación de interfaz
 y lla clase ImpresoraBasica no lo sobreescribe nos mostrará que este tipo de impresora esta enviando un fax cuando esto no es posible.  
   
-**Pregunt 30**  
+**Pregunta 30**  
 Al usar un método vacío en lugar de lanzar una excepción en el método sendFax() de la clase ImpresoraBasica, al ser invocado este método no hara nada y en caso de tener una sentencia posterior a su llamada la ejecutara sin ningun problema, en cambio si tiene una excepcion el programa se cortará al invocar al método.
+
+**Pregunta 31**  
+Salida:     
+![img_45.png](img/img_45.png)     
+La clase cliente crea un objeto de clase InterfazUsuario, el llama al método saveEmployeeId() que recibe como atributo Id un string.        
+![img_46.png](img/img_46.png)       
+La clase InterfazUsuario tiene un constructor que instancia la clase OracleDatabase donde se "guardaran" los usuarios y para guardarlos tiene el método saveEmployeeId() que llama al método saveEmpIdInDatabase() de OracleDatabase.       
+![img_47.png](img/img_47.png)       
+La clase OracleDatabase imita a una base de datos, guardando al usuario, y para validar que lo ah "guardado", imprime el Id.        
+![img_48.png](img/img_48.png)       
+
+**Pregunta 32**      
+La dependencia de la clase UserInterface (una clase de alto nivel) de la clase OracleDatabase,  hace que cualquier cambio en la clase OracleDatabase(clase de bajo nivel) necesite realizar cambios en la clase UserInterface.      
+
+**Pregunta 33**      
+La clase InterfazUsuario.       
+![img_49.png](img/img_49.png)       
+Interfaz BaseDatos.     
+![img_50.png](img/img_50.png)      
+Clase MySQLDatabase
+![img_53.png](img/img_53.png)    
+Clase OracleDatabase
+![img_54.png](img/img_54.png)  
+**Pregunta 34**   
+Salida:         
+![img_51.png](img/img_51.png)    
+Explicación:
+![img_52.png](img/img_52.png)       
+Se crea un objeto de tipo InterfazUsuario, el cual luego se le pasará un objeto de tipo BaseDatos.       
+A continuación, se le pasa un objeto de tipo OracleDatabase; y 
+se llama al método saveEmployeeId() de la clase InterfazUsuario, el cual recibe como atributo un string("E003").
+Este método llama al método saveEmpIdInDatabase() de la base de datos a la cual pertenece (Oracle o MySQL) y nos imprime a la base de 
+datos que pertenece el usuario. Esto mismo procedimiento se repite para la base de datos MySQLDatabase.
+
+**Pregunta 35**   
+Cuando necesitamos que la clase de alto nivel dependa de la clase de bajo nivel como en el caso de restringir las instancias de las clases de bajo nivel creadas en un punto determinado.      
+
+**Pregunta 36**   
+Permite hacer un cambio a la base de datos pero conservando el mismo objeto.
+![img_55.png](img/img_55.png)   
+![img_56.png](img/img_56.png)   
