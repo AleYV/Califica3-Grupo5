@@ -14,10 +14,10 @@ Luego se hace un llamado al método showEmpDetail() de la clase Cliente, pasánd
 ![img_3.png](img/img_3.png)
 ![img_6.png](img/img_6.png)     
 Este método, lo primero que hace es invocar al método displayEmpDetail() de la clase Empleado, el cual nos imprime los nombres y los años de experiencia del empleado. 
-![img_4.png](img/img_4.png)
+![img_4.png](img/img_4.png)         
 Se genera un Id para imprimirlo con el método invocado generateEmpId() de la clase Empleado. Este Id es creado mediante la generación de un número entero random entre 0 y 1000, y la primera letra del nombre del empleado.       
 ![img_2.png](img/img_2.png)         
-Luego, evalúa si los años de experiencia del empleado son suficientes para ser considerado un senior(los años de experiencia deben ser mayores a 5) con el método checkSeniority() de la clase Empleado, caso contrario es un Junior, luego lo imprime.
+Luego, evalúa si los años de experiencia del empleado son suficientes para ser considerado un senior(los años de experiencia deben ser mayores a 5) con el método checkSeniority() de la clase Empleado, caso contrario es un Junior, luego lo imprime.     
 ![img_7.png](img/img_7.png)         
 Se realiza el mismo procedimiento para la creación del objeto de la clase Empleado con los atributos de nombre Chalito, apellido Smart y experiencia de 3.2.        
 ![img_8.png](img/img_8.png)     
@@ -50,7 +50,7 @@ Para el método evaluateDistintion() podemos observar que la clase DistintionDec
 Resultados:  
 ![img_5.png](img/img_5.png)  
 Explicación:  
-![img_14.png](img/img_14.png)
+![img_14.png](img/img_14.png)       
 Primero a través de la clase Cliente se crea una lista de tipo Estudiante que llama a la funcion enrollStudents() que crea y agrega objetos de tipo de Estudiante devolviendo la lista con los objetos añadidos  
 ![img_12.png](img/img_12.png)  
 Luego imprimimos los atributos de cada objeto de la lista de tipo Estudiante, ademas verificamos que objetos tienen distinciones mediante el método evaluateDistinction() de la clase DistintionDecider, el cual nos dice que dependiendo del departamento pertenezca y ademas supere un score minimo este imprime que el estudiante recibió una distinción  
@@ -76,15 +76,15 @@ Para las clases ArtsDistinctionDecider y ScienceDistinctionDecider que implement
 Salida:  
 ![img_18.png](img/img_18.png)       
 Explicación:        
-Estudiante.java         
-La calse abstacta solo declara nuestros parametors que usaremos para definir cualquier objeto de este tipo(name, regName,score)  
-ArteEstudiante.java y CienciaEstudiante.java  
+- Estudiante.java         
+La clase abstacta solo declara nuestros parametros que usaremos para definir cualquier objeto de este tipo(name, regName,score)  
+- ArteEstudiante.java y CienciaEstudiante.java  
 Ambas clases extienden de la clase abstracta Estudiante y son dos tipos de esta.  
-DistintionDecider.java  
+- DistintionDecider.java  
 Es una interfaz que declara el metodo que usaran as clases que implementaran.  
-ScienceDistinctionDecider.java y ArtsDistinctionDecider.java  
+- ScienceDistinctionDecider.java y ArtsDistinctionDecider.java  
 Clases que implementan la interfaz DistintionDecider y nos evalua si el estudiante de su departamento obtienen una distionción 
-Cliente.java    
+- Cliente.java    
 ![img_19.png](img/img_19.png)       
 El método main() nos creara dos listas de alumnos de los departamentos de Ciencia y Arte mediante los métodos enrollScienceStudents() y enrollArtsStudents() respectivamente. Ambos métodos nos crean y agregan objetos de tipo Estudiante a cada una de las listas.
 Luego imprimiremos ambas listas de los departamentos, posteriormente las listas de estudiantes de los departamentos de ciencia y artes llamaran a las clases ScienceDistinctionDecider y ArtsDistinctionDecider respectivamente para poder determnar a aquellos estudiantes que hayan obtenido distincion en esos departamentos.  
@@ -239,14 +239,14 @@ La clase InterfazUsuario.
 ![img_49.png](img/img_49.png)       
 Interfaz BaseDatos.     
 ![img_50.png](img/img_50.png)      
-Clase MySQLDatabase
+Clase MySQLDatabase     
 ![img_53.png](img/img_53.png)    
-Clase OracleDatabase
+Clase OracleDatabase        
 ![img_54.png](img/img_54.png)  
 **Pregunta 34**   
 Salida:         
 ![img_51.png](img/img_51.png)    
-Explicación:
+Explicación:        
 ![img_52.png](img/img_52.png)       
 Se crea un objeto de tipo InterfazUsuario, el cual luego se le pasará un objeto de tipo BaseDatos.       
 A continuación, se le pasa un objeto de tipo OracleDatabase; y 
@@ -258,6 +258,6 @@ datos que pertenece el usuario. Esto mismo procedimiento se repite para la base 
 Cuando necesitamos que la clase de alto nivel dependa de la clase de bajo nivel como en el caso de restringir las instancias de las clases de bajo nivel creadas en un punto determinado.      
 
 **Pregunta 36**   
-Permite hacer un cambio a la base de datos pero conservando el mismo objeto.
-![img_55.png](img/img_55.png)   
-![img_56.png](img/img_56.png)   
+Permite hacer un cambio a la base de datos pero conservando el mismo objeto.        
+![img_55.png](img/img_55.png)       
+![img_56.png](img/img_56.png)       
